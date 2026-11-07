@@ -1,0 +1,12 @@
+.env
+assignment/
+sample/
+outputs_tmp/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.cache/
+data/
+*.bundle
+.pytest_cache/
