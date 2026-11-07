@@ -58,6 +58,16 @@ def _coerce_scalar(v: Any, t: str) -> tuple[Any, bool]:
     """-> (value, ok). Non-destructive: on failure for text-like content the original string survives."""
     if is_blank(v):
         return None, True
+    if isinstance(v, dict):                       # e.g. {"amount": 2845, "unit": "month"} -> take the first usable scalar
+        for key in ("value", "amount", "monthly", "rent", "number", "total"):
+            if key in v and not isinstance(v[key], (dict, list)):
+                return _coerce_scalar(v[key], t)
+        for x in v.values():
+            if isinstance(x, (int, float, str)) and not is_blank(x):
+                c, ok = _coerce_scalar(x, t)
+                if ok:
+                    return c, ok
+        return None, False
     if t in ("number", "integer"):
         x = to_number(v)
         if x is None and isinstance(v, str):
@@ -107,6 +117,8 @@ def _parse_fields(obj: Any, cards: list[FieldCard]) -> dict[str, FieldOut]:
                        confidence=conf, calc=str(r.get("calc") or ""))
         if not ok:
             out.flags.add("type_fail")
+            logging.getLogger("records").warning("type coercion failed", extra={"field": c.key, "type": c.type,
+                                                                                 "raw": repr(r.get("value"))[:160]})
         res[c.key] = out
     return res
 
@@ -114,6 +126,12 @@ def _parse_fields(obj: Any, cards: list[FieldCard]) -> dict[str, FieldOut]:
 def _check_quotes(res: dict[str, FieldOut], doc: ParsedDoc, cards: list[FieldCard] | None = None) -> None:
     ftypes = {c.key: c.type for c in cards} if cards else {}
     for k, f in res.items():
+        empty = f.value is None or (isinstance(f.value, list) and (not f.value or all(x is None for x in f.value)))
+        if empty and f.quote and re.search(r"\d|[A-Za-z]{4}", f.quote):
+            f.flags.add("null_but_quoted")          # the model cited evidence yet gave no usable value
+            continue
+        if isinstance(f.value, list) and any(x is None for x in f.value):
+            f.flags.add("null_in_list")
         if f.value is None or isinstance(f.value, list) and not f.value:
             continue
         if not f.quote and not f.calc:
@@ -135,7 +153,7 @@ def _check_quotes(res: dict[str, FieldOut], doc: ParsedDoc, cards: list[FieldCar
 
 
 def _needs_second_look(f: FieldOut) -> bool:
-    return bool(f.flags & {"type_fail", "quote_unverified", "value_not_in_quote"}) or f.confidence < LOW_CONF
+    return bool(f.flags & {"type_fail", "quote_unverified", "value_not_in_quote", "null_but_quoted", "null_in_list"}) or f.confidence < LOW_CONF
 
 
 def _call(model: str, system: str, user: str, ctx: JobContext, tag: str, max_tokens: int = 8000) -> Any:

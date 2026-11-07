@@ -7,7 +7,8 @@ GENERAL RULES
 - Booleans: true/false only when the document supports it. If the field says "false otherwise" / "0 if none", use that default when the document grants no such right/amount.
 - Money and counts are plain JSON numbers (no $, no commas). Dates are YYYY-MM-DD. Percentages are the number exactly as printed (0.91 for "0.91%", 5.25 for "5.25%"), never a fraction.
 - Prefer the governing figure: a handwritten or initialed change overrides the printed text; an amendment overrides the base lease; the current figure overrides a projection unless the field asks for the projection.
-- Text fields: copy the document's own words (short phrase), without adding interpretation.
+- Text fields: copy the document's own words for the clause, verbatim, including every qualifier the clause attaches (e.g. "double the Base Rent ... and any appropriate Additional Rent then applicable"). Drop only lead-in words that are not part of the term ("commonly known as", "Tenant shall"). Do not paraphrase or summarise.
+- Identifier fields (suite, floor, unit, name of a building): the bare identifier only ("Suite 214W", not "Second Floor, West Section, Suite 214W"; the building's name, not its street address). Keep spelling, punctuation and abbreviations exactly as printed.
 - List fields: one item per period/option/etc., in document order; parallel lists must have the same length and stay aligned.
 - Scanned pages come through OCR and contain typos (0/O, 1/l, 5/S) and stray symbols. Use context to read them, but never invent digits you cannot support.
 - Documents may contain tables, headers and footers repeated on every page, exhibits and riders. Look in all of them: a value often lives in a later article, rider, schedule or amendment rather than on the first page.

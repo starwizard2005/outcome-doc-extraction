@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
-ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PIP_NO_CACHE_DIR=1 DATA_DIR=/data
+ENV OMP_THREAD_LIMIT=1 PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PIP_NO_CACHE_DIR=1 DATA_DIR=/data
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         poppler-utils tesseract-ocr tesseract-ocr-eng curl \

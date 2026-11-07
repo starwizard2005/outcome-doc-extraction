@@ -9,6 +9,7 @@ import logging
 import os
 import shutil
 import subprocess
+import threading
 import tempfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -80,15 +81,30 @@ def render_page_jpeg(path: Path, page: int, dpi: int = 130, quality: int = 70, m
     return buf.getvalue()
 
 
+# Tesseract is OpenMP-parallel by default; with several pages and several jobs in flight the threads fight
+# each other and a 2-second page takes minutes. One thread per process + a process-wide cap on concurrent
+# tesseract runs keeps latency flat under load.
+_OCR_SLOTS = threading.BoundedSemaphore(max(1, min(4, os.cpu_count() or 1)))
+_OCR_ENV = {**os.environ, "OMP_THREAD_LIMIT": "1", "OMP_NUM_THREADS": "1", "OMP_WAIT_POLICY": "PASSIVE"}
+
+
 def _ocr_page(path: Path, page: int) -> str:
-    png = render_page_png(path, page, dpi=OCR_DPI, gray=True)
-    with tempfile.TemporaryDirectory() as td:
-        img = Path(td) / "page.png"
-        img.write_bytes(png)
-        r = _run(["tesseract", str(img), "stdout", "-l", "eng", "--psm", "3"], timeout=240)
-        if r.returncode != 0:
-            raise RuntimeError(f"tesseract failed on page {page}: {r.stderr.decode('utf-8', 'replace')[:200]}")
-        return r.stdout.decode("utf-8", "replace")
+    last: Exception | None = None
+    for dpi, timeout in ((OCR_DPI, 90), (150, 120)):
+        try:
+            png = render_page_png(path, page, dpi=dpi, gray=True)
+            with tempfile.TemporaryDirectory() as td:
+                img = Path(td) / "page.png"
+                img.write_bytes(png)
+                with _OCR_SLOTS:
+                    r = subprocess.run(["tesseract", str(img), "stdout", "-l", "eng", "--psm", "3"],
+                                       capture_output=True, timeout=timeout, env=_OCR_ENV)
+                if r.returncode != 0:
+                    raise RuntimeError(f"tesseract failed on page {page}: {r.stderr.decode('utf-8', 'replace')[:200]}")
+                return r.stdout.decode("utf-8", "replace")
+        except Exception as e:  # noqa: BLE001
+            last = e
+    raise last  # type: ignore[misc]
 
 
 def parse_pdf(path: Path, warnings: list[str]) -> list[Page]:

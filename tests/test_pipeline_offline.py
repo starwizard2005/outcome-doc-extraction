@@ -37,3 +37,17 @@ def test_pipeline_matches_truth(doc_id, fname, schema_name, min_score):
     rep = V.score(result, truth, schema)
     assert rep["score"] >= min_score, (rep["score"], rep["misses"][:5], rep["hallucinations"][:5])
     assert result["metadata"]["model_calls"] >= 1
+
+
+def test_coercion_and_null_flags():
+    from app.extract.records import FieldOut, _check_quotes, _coerce
+    from app.extract.fieldspec import FieldCard
+    c = FieldCard(key="m", name="m", description="monthly rent as a list of numbers", type="list", item_type="number")
+    assert _coerce([{"amount": 2845, "unit": "month"}], c) == ([2845.0], True)
+    assert _coerce(["$2,845.00"], c) == ([2845.0], True)
+    f = FieldOut(value=[None], quote="October 1, 2025 through April 30, 2027 $2,845.00", page=1, confidence=0.95)
+    from app.parse.types import Page, ParsedDoc
+    doc = ParsedDoc(kind="pdf", path=None)
+    doc.pages = [Page(number=1, text="October 1, 2025 through April 30, 2027 $2,845.00")]
+    _check_quotes({"m": f}, doc, [c])
+    assert "null_but_quoted" in f.flags
