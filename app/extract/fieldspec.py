@@ -35,10 +35,15 @@ _NUMERIC_KEY = re.compile(r"percent|pct|trend|avail|(?:^|_)occ(?:_|$)|units|vaca
 def infer_type(key: str, description: str) -> tuple[str, str]:
     d = description or ""
     if _LIST.search(d):
-        # element type: dates > numbers > strings, judged from the same text
-        if re.search(r"yyyy-mm-dd|start dates?|end dates?|\bdates?\b", d, re.I) and not re.search(r"\bmonths?\b.*\bnotice\b|\bin months\b", d, re.I):
+        # Element type comes from what the list IS (its opening clause / key), not from phrases such as
+        # "aligned with the start dates" that merely say how it lines up with another list.
+        head = re.split(r",\s*aligned|\baligned\b|\bin order\b|\.\s", d, maxsplit=1)[0]
+        if re.search(r"\bnumbers? only\b|\bas numbers?\b", d, re.I):
+            return "list", "number"
+        if re.search(r"(?:^|_)dates?$|(?:^|_)dates?_", key, re.I) or re.search(r"yyyy-mm-dd|\bdates?\b", head, re.I) and not re.search(
+                r"\b(?:rent|amount|fee|price|rate)\b", head, re.I):
             return "list", "date"
-        if re.search(r"\bnumbers? only\b|\bmonthly\b|\bin months\b|\bper rentable\b|\bamounts?\b", d, re.I):
+        if re.search(r"\bmonthly\b|\bin months\b|\bper rentable\b|\bamounts?\b|\brent\b|\bpercent|\bsquare f", head, re.I):
             return "list", "number"
         return "list", "string"
     if _STR_FORCE.search(d) and not re.search(r"\bas a (?:percentage )?number\b|^\s*true if", d, re.I) and not (
