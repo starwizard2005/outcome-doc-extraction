@@ -23,8 +23,7 @@ Field descriptions are not trusted: types are inferred from them and the prompts
 ## Models and spend
 Haiku 5.5 for spec writing, planning, pass 1 and batch conversion; Sonnet 5.5 only for doubtful record fields and as
 fallback; GLM-5.3-flash for page images. Cost per document, cache off: tables $0.003-0.010, leases $0.07-0.13,
-OM $0.04; **$0.045 average, $0.357 for the 8 samples**. Total spend of the $10 across all development runs: **about
-__SPEND__** (the service has a spend cap and a persisted ledger; cached re-runs are free, which is what made iterating cheap).
+OM $0.04; **$0.045 average, $0.357 for the 8 samples**. Total spend of the $10 across all development runs: **$2.03 of the $10** (the service has a spend cap and a persisted ledger; cached re-runs are free, which is what made iterating cheap).
 I did not compare models on every document; routing was chosen by field difficulty and checked against the validator.
 
 ## Service
