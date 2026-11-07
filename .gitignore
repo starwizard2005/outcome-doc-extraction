@@ -11,3 +11,5 @@ data/
 *.bundle
 .pytest_cache/
 eval_out/
+assignment
+sample
