@@ -1,0 +1,22 @@
+{
+  "sheet": "Willow Creek Commons", "layout": "blocks", "first_row": 8,
+  "record": [{"col": "A", "op": "nonempty"}, {"col": "C", "op": "numeric"}, {"col": "D", "op": "nonempty"}],
+  "stop": [{"col": "A", "op": "eq", "value": "Status Summary"}],
+  "duplicates": "first",
+  "block": {"label_col": "H"},
+  "fields": {
+    "property_name": {"cell": "A3"},
+    "report_period": {"cell": "A4", "as": "year_month"},
+    "unit_number": {"col": "A"}, "unit_type_code": {"col": "B"},
+    "unit_square_feet": {"col": "C", "as": "number"}, "unit_status": {"col": "D"},
+    "resident_name": {"col": "E", "regex": "^(?!\\s*--\\s*Vacant)(.+)$"},
+    "market_rent": {"col": "F", "as": "number"},
+    "monthly_rent": {"detail_sum": {"label_in": ["Rent"], "value_col": "I"}},
+    "monthly_other_charges": {"detail_sum": {"label_not_in": ["Rent"], "value_col": "I"}},
+    "monthly_total_charges": {"detail_value": {"label_col": "G", "label_in": ["Charge Total:"], "value_col": "I"}, "default": 0},
+    "deposit_held": {"col": "K", "as": "number", "default": 0},
+    "balance": {"col": "J", "as": "number"},
+    "move_in_date": {"col": "L", "as": "date"}, "lease_start_date": {"col": "M", "as": "date"},
+    "lease_end_date": {"col": "N", "as": "date"}, "expected_move_out_date": {"col": "O", "as": "date"}
+  }
+}

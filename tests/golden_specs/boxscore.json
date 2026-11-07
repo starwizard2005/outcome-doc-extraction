@@ -1,0 +1,19 @@
+{
+  "sheet": "csv", "layout": "flat", "first_row": 7,
+  "record": [{"col": "A", "op": "nonempty"}, {"col": "F", "op": "numeric"}],
+  "skip": [{"col": "A", "op": "regex", "value": "(?i)^total"}],
+  "duplicates": "first",
+  "fields": {
+    "property_name": {"cell": "A2", "regex": "^([^(]*)", "as": "string"},
+    "date": {"cell": "A3", "regex": "-\\s*(\\d{1,2}/\\d{1,2}/\\d{4})\\s*$", "as": "date"},
+    "code": {"col": "A"}, "name": {"col": "B"},
+    "avg_sq_ft": {"col": "D", "as": "number"}, "avg_rent": {"col": "E", "as": "number"},
+    "units": {"col": "F", "as": "integer"}, "occ_no_notice": {"col": "G", "as": "integer"},
+    "vacant_rented": {"col": "H", "as": "integer"}, "vacant_unrented": {"col": "I", "as": "integer"},
+    "notice_rented": {"col": "J", "as": "integer"}, "notice_unrented": {"col": "K", "as": "integer"},
+    "avail": {"col": "L", "as": "integer"}, "model": {"col": "M", "as": "integer"},
+    "down": {"col": "N", "as": "integer"}, "admin": {"col": "O", "as": "integer"},
+    "percent_occupied": {"col": "P", "as": "number"}, "p_occ_wornonrev": {"col": "Q", "as": "number"},
+    "percent_leased": {"col": "R", "as": "number"}, "p_trend": {"col": "S", "as": "number"}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "sheet": "Report1", "layout": "flat", "first_row": 8,
+  "record": [{"col": "A", "op": "regex", "value": "^\\d{3}-\\d{3}$"},
+             {"cols": ["C","D","E","F","G","H","I","J","K","L","M","N","O"], "op": "any_numeric"}],
+  "duplicates": "first",
+  "fields": {
+    "property_name": {"cell": "A1", "regex": "Property\\s*=\\s*(.+)$"},
+    "period_start": {"cell": "A3", "regex": "=\\s*([A-Za-z]{3,9} \\d{4})", "as": "month_start"},
+    "period_end": {"cell": "A3", "regex": "-\\s*([A-Za-z]{3,9} \\d{4})", "as": "month_end"},
+    "gl_code": {"col": "A"}, "line_item": {"col": "B"},
+    "section": {"above": {"tests": [{"col": "B", "op": "nonempty"},
+                                     {"cols": ["C","D","E","F","G","H","I","J","K","L","M","N","O"], "op": "none_numeric"}],
+                           "col": "B"}},
+    "category": {"rules": [
+        {"when": [{"col": "A", "op": "regex", "value": "^5"}], "value": "Revenue"},
+        {"when": [{"col": "A", "op": "regex", "value": "^1"}], "value": "Other"},
+        {"when": [{"any": [{"col": "B", "op": "regex", "value": "(?i)^\\s*NET\\b"}, {"col": "B", "op": "regex", "value": "(?i)BEFORE"}]}], "value": "Other"}],
+        "default": "Expense"},
+    "amount_total": {"col": "O", "as": "number"},
+    "amount_first_month": {"col": "C", "as": "number"}, "amount_last_month": {"col": "N", "as": "number"},
+    "months_with_activity": {"count_numeric_nonzero": ["C","D","E","F","G","H","I","J","K","L","M","N"]}
+  }
+}
