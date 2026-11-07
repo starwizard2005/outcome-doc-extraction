@@ -7,6 +7,7 @@ services:
       - .env
     environment:
       DATA_DIR: /data
+      LLM_CACHE: ${LLM_CACHE:-1}
     volumes:
       - appdata:/data
       # read-only mounts used only by the eval runner (`docker compose run --rm app python -m eval.run_eval`)
