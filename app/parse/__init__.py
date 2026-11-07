@@ -11,7 +11,7 @@ class UnsupportedFile(ValueError):
     pass
 
 
-def sniff_kind(path: Path) -> str:
+def sniff_kind(path: Path, filename: str = "") -> str:
     """pdf | docx | xlsx | csv, from content. Raises UnsupportedFile otherwise."""
     with open(path, "rb") as f:
         head = f.read(8)
@@ -33,6 +33,12 @@ def sniff_kind(path: Path) -> str:
     raw = path.read_bytes()[:65536]
     if b"\x00" in raw and not raw.startswith((b"\xff\xfe", b"\xfe\xff")):
         raise UnsupportedFile("binary file of unknown type")
+    printable = sum(1 for b in raw if b in (9, 10, 13) or 32 <= b < 127 or b >= 128)
+    if raw and printable / len(raw) < 0.95:
+        raise UnsupportedFile("binary file of unknown type")
+    first = next((ln for ln in raw.decode("utf-8", "replace").splitlines() if ln.strip()), "")
+    if not (filename.lower().endswith(".csv") or any(d in first for d in (",", ";", "\t", "|"))):
+        raise UnsupportedFile("unsupported file type: expected PDF, DOCX, XLSX or CSV")
     return "csv"
 
 

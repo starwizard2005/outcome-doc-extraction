@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      DATA_DIR: /data
+    volumes:
+      - appdata:/data
+      # read-only mounts used only by the eval runner (`docker compose run --rm app python -m eval.run_eval`)
+      - ./assignment:/srv/assignment:ro
+      - ./outputs:/srv/outputs
+      - ./eval_out:/srv/eval_out
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 4g
+
+volumes:
+  appdata:

@@ -10,3 +10,4 @@ __pycache__/
 data/
 *.bundle
 .pytest_cache/
+eval_out/
