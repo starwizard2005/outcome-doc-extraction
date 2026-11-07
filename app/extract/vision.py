@@ -82,3 +82,66 @@ def verify_scanned(doc: ParsedDoc, cards: list[FieldCard], res: dict[str, FieldO
 
     with ThreadPoolExecutor(max_workers=min(4, len(pages))) as ex:
         list(ex.map(one, pages))
+
+
+FILL_ACCEPT_CONF = 0.8
+FILL_MAX_FIELDS = 14
+FILL_PAGES_PER_FIELD = 2
+
+
+def fill_missing(doc: ParsedDoc, cards: list[FieldCard], res: dict[str, FieldOut], ctx: JobContext) -> None:
+    """For scanned PDFs: fields still empty after text extraction and re-reading may be handwritten or
+    garbled by OCR. Look at the most relevant scanned pages as images (cheap vision model) and fill them
+    in when the model is confident. A confident null from the text models is left alone."""
+    if doc.kind != "pdf" or not doc.scanned_pages:
+        return
+    from .relevance import rank_pages
+    scanned_pages = [p for p in doc.pages if p.number in set(doc.scanned_pages)]
+    cand = [c for c in cards if c.type != "list" and res[c.key].value is None and res[c.key].confidence < 0.8]
+    cand = cand[:FILL_MAX_FIELDS]
+    if not cand or not scanned_pages:
+        return
+    by_page: dict[int, list[FieldCard]] = {}
+    for c in cand:
+        for p in rank_pages(scanned_pages, f"{c.name} {c.description}", k=FILL_PAGES_PER_FIELD)[:FILL_PAGES_PER_FIELD]:
+            by_page.setdefault(p.number, []).append(c)
+    ctx.stage("VISION-FILL")
+    model = ctx.settings.model_vision
+
+    def one(page: int) -> None:
+        cs = by_page[page]
+        try:
+            img = render_page_jpeg(doc.path, page)
+        except Exception as e:  # noqa: BLE001
+            ctx.warn(f"could not render page {page} for vision fill: {e}")
+            return
+        lines = [f'- "{c.key}" ({c.type}): {c.description}' for c in cs]
+        text = ("FIELDS TO FIND ON THIS PAGE\n" + "\n".join(lines) +
+                f"\n\nOCR TEXT OF THIS PAGE (unreliable)\n{doc.page_text(page)[:6000]}")
+        content = [{"type": "text", "text": text},
+                   {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(img).decode()}}]
+        try:
+            obj, _ = chat_json(model, [{"role": "system", "content": prompts.VISION_FILL_SYSTEM},
+                                       {"role": "user", "content": content}],
+                               tracker=ctx.tracker, max_tokens=2000, deadline=ctx.deadline, tag=f"vision-fill-p{page}")
+        except LLMError as e:
+            ctx.warn(f"vision fill failed for page {page}: {e}")
+            return
+        raw = obj.get("fields", obj) if isinstance(obj, dict) else {}
+        for c in cs:
+            r = raw.get(c.key) if isinstance(raw, dict) else None
+            f = res[c.key]
+            if not isinstance(r, dict) or f.value is not None or r.get("value") in (None, ""):
+                continue
+            conf = r.get("confidence")
+            conf = float(conf) if isinstance(conf, (int, float)) else 0.0
+            v, ok = _coerce(r["value"], c)
+            if ok and v is not None and conf >= FILL_ACCEPT_CONF:
+                log.info("vision filled field", extra={"job_id": ctx.job_id, "field": c.key, "value": str(v)[:60]})
+                f.value, f.source, f.confidence, f.page = v, "vision", min(conf, 0.9), page
+                f.quote = f.quote or f"[handwritten/scanned entry on page {page}] {str(r.get('note', ''))[:80]}"
+                f.flags.add("vision_filled")
+                f.flags.discard("null_but_quoted")
+
+    with ThreadPoolExecutor(max_workers=min(4, len(by_page))) as ex:
+        list(ex.map(one, sorted(by_page)))

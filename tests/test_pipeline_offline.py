@@ -51,3 +51,29 @@ def test_coercion_and_null_flags():
     doc.pages = [Page(number=1, text="October 1, 2025 through April 30, 2027 $2,845.00")]
     _check_quotes({"m": f}, doc, [c])
     assert "null_but_quoted" in f.flags
+
+
+def test_vision_fill_accepts_confident_value(monkeypatch):
+    from app.extract import vision
+    from app.extract.ctx import JobContext
+    from app.extract.fieldspec import FieldCard
+    from app.extract.records import FieldOut
+    from app.parse.types import Page, ParsedDoc
+    seen = {}
+
+    def fake_chat_json(model, messages, **kw):
+        seen["tag"] = kw.get("tag")
+        return {"fields": {"deposit": {"value": "$2,150", "confidence": 0.9, "note": "handwritten"}}}, None
+
+    monkeypatch.setattr(vision, "chat_json", fake_chat_json)
+    monkeypatch.setattr(vision, "render_page_jpeg", lambda *a, **k: b"\xff\xd8fake")
+    doc = ParsedDoc(kind="pdf", path="x.pdf")
+    doc.pages = [Page(number=1, text="cover", scanned=True), Page(number=2, text="SECURITY DEPOSIT: garbled", scanned=True)]
+    card = FieldCard(key="deposit", name="security deposit", description="security deposit amount", type="number")
+    res = {"deposit": FieldOut(value=None, quote="", page=None, confidence=0.5)}
+    vision.fill_missing(doc, [card], res, JobContext())
+    assert res["deposit"].value == 2150.0 and res["deposit"].source == "vision" and "vision_filled" in res["deposit"].flags
+    # a confident null from the text models is left alone
+    res2 = {"deposit": FieldOut(value=None, quote="", page=None, confidence=0.95)}
+    vision.fill_missing(doc, [card], res2, JobContext())
+    assert res2["deposit"].value is None

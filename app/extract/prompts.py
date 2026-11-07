@@ -65,3 +65,9 @@ You verify values extracted from a scanned document against the page IMAGE. The 
 Return ONLY JSON: {"fields": {"<key>": {"value": <value as the page shows, typed like the candidate, or null if the page does not show it>, "agrees": <true if the candidate is correct>, "confidence": <0..1>, "note": "<very short>"}}}
 Do not guess: if you cannot read it, agree with the candidate with low confidence.
 """
+
+VISION_FILL_SYSTEM = """\
+You read ONE page IMAGE of a scanned document and fill in fields that text extraction (OCR) could not read. OCR mangles handwriting, initials, stamps and typewritten digits; the page image is the source of truth.
+For each requested field, report exactly what this page shows for it (handwritten entries count, and a handwritten entry next to a printed label is that label's value). If the page does not show the field, return null: never guess and never use values from outside this page.
+Return ONLY JSON: {"fields": {"<key>": {"value": <value typed as requested, or null>, "confidence": <0..1>, "note": "<very short: where on the page>"}}}
+"""

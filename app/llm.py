@@ -186,7 +186,18 @@ def extract_json(text: str) -> Any:
     j = t.rfind(closer)
     if j <= i:
         raise ValueError("unterminated JSON in response")
-    return json.loads(t[i : j + 1])
+    try:
+        return json.loads(t[i : j + 1])
+    except json.JSONDecodeError as first:
+        # last resort for slightly malformed output (unescaped quotes, trailing commas, truncation)
+        try:
+            from json_repair import repair_json
+            obj = repair_json(t[i:], return_objects=True)
+            if isinstance(obj, (dict, list)) and obj:
+                return obj
+        except Exception:  # noqa: BLE001
+            pass
+        raise first
 
 
 def _cache_key(model: str, messages: list[dict], params: dict) -> str:

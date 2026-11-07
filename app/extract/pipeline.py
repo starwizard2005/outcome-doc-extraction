@@ -24,7 +24,7 @@ from .sheet_exec import Cell
 from .spec_gen import SpecFailed, generate_spec
 from .text_tables import extract_table_chunked, extract_table_text, sheet_or_page_lines
 from .pdf_lines import lines_from_doc
-from .vision import verify_scanned
+from .vision import fill_missing, verify_scanned
 
 log = logging.getLogger("pipeline")
 
@@ -124,6 +124,7 @@ def run_extraction(path: Path, schema: dict, ctx: JobContext) -> tuple[dict, str
         res = extract_record(doc, cards, ctx)
         try:
             verify_scanned(doc, cards, res, ctx)
+            fill_missing(doc, cards, res, ctx)
         except LLMError as e:
             if isinstance(e, (BudgetExceeded, DeadlineExceeded)):
                 raise
