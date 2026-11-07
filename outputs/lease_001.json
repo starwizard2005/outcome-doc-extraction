@@ -1,0 +1,352 @@
+{
+  "schema": "lease_abstraction",
+  "entries": [
+    {
+      "tenant_name": {
+        "value": "M.J. Delacroix & Associates, P.C.",
+        "citation": "[Page 2] M.J. Delacroix & Associates, P.C.",
+        "confidence": 1.0,
+        "page_numbers": [
+          2
+        ]
+      },
+      "landlord_legal_name": {
+        "value": "TRENT MA-II HOLLIS OFFICE PLAZA, INC.",
+        "citation": "[Page 2] TRENT MA-II HOLLIS OFFICE PLAZA, INC.",
+        "confidence": 0.97,
+        "page_numbers": [
+          2
+        ]
+      },
+      "property_name": {
+        "value": "Hollis Office Plaza",
+        "citation": "[Page 2] Hollis Office Plaza",
+        "confidence": 1.0,
+        "page_numbers": [
+          2
+        ]
+      },
+      "building_address": {
+        "value": "1850 Hollis Road, Fairmont Hills, Illinois 60517",
+        "citation": "[Page 2] 1850 Hollis Road Fairmont Hills, Illinois 60517",
+        "confidence": 0.95,
+        "page_numbers": [
+          2
+        ]
+      },
+      "premises": {
+        "value": "Second Floor, West Section, Suite 214W",
+        "citation": "[Page 2] Second Floor, West Section, Suite 214W",
+        "confidence": 0.95,
+        "page_numbers": [
+          2
+        ]
+      },
+      "rentable_square_footage": {
+        "value": 1892.0,
+        "citation": "[Page 2] approximately 1,892 square feet",
+        "confidence": 0.98,
+        "page_numbers": [
+          2
+        ]
+      },
+      "pro_rata_share": {
+        "value": 0.91,
+        "citation": "[Page 2] 0.91 %",
+        "confidence": 0.95,
+        "page_numbers": [
+          2
+        ]
+      },
+      "permitted_use": {
+        "value": "General Office: Architecture",
+        "citation": "[Page 2] General Office: Architecture",
+        "confidence": 0.95,
+        "page_numbers": [
+          2
+        ]
+      },
+      "lease_execution_date": {
+        "value": "1993-03-05",
+        "citation": "[Page 2] March 5 , 19° 93",
+        "confidence": 0.95,
+        "page_numbers": [
+          2
+        ]
+      },
+      "lease_commencement_date": {
+        "value": "1993-05-01",
+        "citation": "[Page 2] May 1 , 19° 93",
+        "confidence": 0.98,
+        "page_numbers": [
+          2
+        ]
+      },
+      "rent_commencement_date": {
+        "value": "1993-05-01",
+        "citation": "[Page 2] May 1 , 19° 93",
+        "confidence": 0.9,
+        "page_numbers": [
+          2
+        ]
+      },
+      "lease_expiration_date": {
+        "value": "1998-04-30",
+        "citation": "[Page 2] April 30 , 19 98",
+        "confidence": 0.98,
+        "page_numbers": [
+          2
+        ]
+      },
+      "lease_term_months": {
+        "value": 60,
+        "citation": "[Page 2] Five years and no months",
+        "confidence": 0.98,
+        "page_numbers": [
+          2
+        ]
+      },
+      "rent_schedule_start_dates": {
+        "value": [
+          "1993-05-01",
+          "1994-05-01",
+          "1995-05-01",
+          "1996-05-01",
+          "1997-05-01"
+        ],
+        "citation": "[Page 18] 05/01/93 - 04/30/94 $ 23,184 $ 1,932 12 $ 23.184",
+        "confidence": 0.95,
+        "page_numbers": [
+          18
+        ]
+      },
+      "rent_schedule_end_dates": {
+        "value": [
+          "1994-04-30",
+          "1995-04-30",
+          "1996-04-30",
+          "1997-04-30",
+          "1998-04-30"
+        ],
+        "citation": "[Page 18] 05/01/97 - 04/30/98 $ 26.088 $ 2,174 12 $ 26,088",
+        "confidence": 0.95,
+        "page_numbers": [
+          18
+        ]
+      },
+      "rent_schedule_monthly_rent": {
+        "value": [
+          1932.0,
+          1990.0,
+          2050.0,
+          2111.0,
+          2174.0
+        ],
+        "citation": "[Page 18] 05/01/93 - 04/30/94 $ 23,184 $ 1,932 12 $ 23.184",
+        "confidence": 0.93,
+        "page_numbers": [
+          18
+        ]
+      },
+      "rent_schedule_annual_rent_per_rsf": {
+        "value": [
+          12.25,
+          12.62,
+          13.0,
+          13.39,
+          13.79
+        ],
+        "citation": "[Page 18] 05/01/93 - 04/30/94 $ 23,184 $ 1,932 12 $ 23.184",
+        "confidence": 0.9,
+        "page_numbers": [
+          18
+        ]
+      },
+      "total_base_rent": {
+        "value": 123084.0,
+        "citation": "[Page 18] 60 $ 123.084",
+        "confidence": 0.95,
+        "page_numbers": [
+          18
+        ]
+      },
+      "base_rent_escalation": {
+        "value": "fixed steps per schedule",
+        "citation": "[Page 18] 05/01/93 - 04/30/94 $ 23,184 $ 1,932 12 $ 23.184",
+        "confidence": 0.9,
+        "page_numbers": [
+          18
+        ]
+      },
+      "free_rent_months": {
+        "value": 0.0,
+        "citation": "",
+        "confidence": 0.7
+      },
+      "security_deposit_amount": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.6
+      },
+      "letter_of_credit_required": {
+        "value": false,
+        "citation": "",
+        "confidence": 0.7
+      },
+      "expense_structure": {
+        "value": "base year 1993",
+        "citation": "[Page 17] Base Year specified on the Reference Page multiplied by the Premises Rentable Area",
+        "confidence": 0.8,
+        "page_numbers": [
+          17
+        ]
+      },
+      "base_year_expenses": {
+        "value": 1993,
+        "citation": "[Page 2] 19 93",
+        "confidence": 0.9,
+        "page_numbers": [
+          2
+        ]
+      },
+      "base_year_taxes": {
+        "value": 1993,
+        "citation": "[Page 2] 19 93",
+        "confidence": 0.9,
+        "page_numbers": [
+          2
+        ]
+      },
+      "electricity_provision": {
+        "value": "furnished by Landlord for lighting, convenience outlets and other direct uses; excess usage metered and billed to Tenant as additional rent",
+        "citation": "[Page 7] electricity for lighting, convenience outlets and other direct uses",
+        "confidence": 0.7,
+        "page_numbers": [
+          7
+        ]
+      },
+      "parking_spaces": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.9
+      },
+      "parking_monthly_charge": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.9
+      },
+      "ti_allowance_total": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.85
+      },
+      "renewal_option_exists": {
+        "value": false,
+        "citation": "",
+        "confidence": 0.7
+      },
+      "renewal_options_count": {
+        "value": 0.0,
+        "citation": "",
+        "confidence": 0.7
+      },
+      "renewal_term_months": {
+        "value": [],
+        "citation": "",
+        "confidence": 0.85
+      },
+      "renewal_notice_months": {
+        "value": [],
+        "citation": "",
+        "confidence": 0.85
+      },
+      "early_termination_right": {
+        "value": false,
+        "citation": "",
+        "confidence": 0.7
+      },
+      "termination_fee_description": {
+        "value": null,
+        "citation": "",
+        "confidence": 0.8
+      },
+      "right_to_sublet": {
+        "value": "only with prior written consent of Landlord; Landlord may terminate or recapture",
+        "citation": "[Page 6] without the prior written consent of Landlord, and such restrictions shall be binding",
+        "confidence": 0.9,
+        "page_numbers": [
+          6
+        ]
+      },
+      "guarantor_name": {
+        "value": "MARTIN J. DELACROIX",
+        "citation": "[Page 25] Guarantor: MARTIN w/. DFLIACROIX",
+        "confidence": 0.85,
+        "page_numbers": [
+          25
+        ]
+      },
+      "broker_names": {
+        "value": [
+          "Meridian Commercial Realty Group, Inc."
+        ],
+        "citation": "[Page 2] Meridian Commercial Realty Group, Inc.",
+        "confidence": 0.9,
+        "page_numbers": [
+          2
+        ]
+      },
+      "late_fee": {
+        "value": "greater of $75.00 or 6% of the unpaid rent or other payment",
+        "citation": "[Page 3] the greater of: (a) $75.00, or (b) a sum equal to 6% of the unpaid rent or other payment",
+        "confidence": 0.95,
+        "page_numbers": [
+          3
+        ]
+      },
+      "holdover_rent": {
+        "value": "150% of the Annual Rent for the last period prior to the date of such termination plus all Rent Adjustments",
+        "citation": "[Page 8] 150% of the amount of the Annual Rent for the last period prior to the date of such termination",
+        "confidence": 0.93,
+        "page_numbers": [
+          8
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "model_calls": 12,
+    "tokens_in": 110757,
+    "tokens_out": 11638,
+    "cost_usd": 0.099054,
+    "cache_hits": 0,
+    "cost_if_uncached_usd": 0.099054,
+    "models": {
+      "anthropic/claude-haiku-5.5": {
+        "calls": 1,
+        "tokens_in": 38237,
+        "tokens_out": 6981,
+        "cost_usd": 0.007314
+      },
+      "anthropic/claude-sonnet-5.5": {
+        "calls": 1,
+        "tokens_in": 37435,
+        "tokens_out": 1687,
+        "cost_usd": 0.09174
+      },
+      "z-ai/glm-5.3-flash": {
+        "calls": 10,
+        "tokens_in": 35085,
+        "tokens_out": 2970,
+        "cost_usd": 0.0
+      }
+    },
+    "latency_ms": 117956,
+    "mode": "record",
+    "document_kind": "pdf",
+    "pages": 25,
+    "scanned_pages": 25,
+    "warnings": [],
+    "degraded": []
+  }
+}

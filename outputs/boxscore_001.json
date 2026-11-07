@@ -1,0 +1,1647 @@
+{
+  "schema": "boxscore",
+  "entries": [
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - P1",
+        "citation": "[csv!A7] PR - P1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A7"
+        ]
+      },
+      "name": {
+        "value": "P1 -1x1 Pearl",
+        "citation": "[csv!B7] P1 -1x1 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B7"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 940.0,
+        "citation": "[csv!D7] 940.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D7"
+        ]
+      },
+      "avg_rent": {
+        "value": 5135.0,
+        "citation": "[csv!E7] 5135.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E7"
+        ]
+      },
+      "units": {
+        "value": 9,
+        "citation": "[csv!F7] 9",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F7"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 1,
+        "citation": "[csv!G7] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G7"
+        ]
+      },
+      "vacant_rented": {
+        "value": 0,
+        "citation": "[csv!H7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H7"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 0,
+        "citation": "[csv!I7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I7"
+        ]
+      },
+      "notice_rented": {
+        "value": 0,
+        "citation": "[csv!J7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J7"
+        ]
+      },
+      "notice_unrented": {
+        "value": 2,
+        "citation": "[csv!K7] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K7"
+        ]
+      },
+      "avail": {
+        "value": "1",
+        "citation": "[csv!L7] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L7"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M7"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N7"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O7] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O7"
+        ]
+      },
+      "percent_occupied": {
+        "value": 75.0,
+        "citation": "[csv!P7] 75.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P7"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 75.0,
+        "citation": "[csv!Q7] 75.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q7"
+        ]
+      },
+      "percent_leased": {
+        "value": 75.0,
+        "citation": "[csv!R7] 75.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R7"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S7] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S7"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - P2",
+        "citation": "[csv!A8] PR - P2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A8"
+        ]
+      },
+      "name": {
+        "value": "P2 -1x1 Pearl",
+        "citation": "[csv!B8] P2 -1x1 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B8"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 131.0,
+        "citation": "[csv!D8] 131.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D8"
+        ]
+      },
+      "avg_rent": {
+        "value": 3231.0,
+        "citation": "[csv!E8] 3231.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E8"
+        ]
+      },
+      "units": {
+        "value": 17,
+        "citation": "[csv!F8] 17",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F8"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 4,
+        "citation": "[csv!G8] 4",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G8"
+        ]
+      },
+      "vacant_rented": {
+        "value": 0,
+        "citation": "[csv!H8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H8"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 2,
+        "citation": "[csv!I8] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I8"
+        ]
+      },
+      "notice_rented": {
+        "value": 0,
+        "citation": "[csv!J8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J8"
+        ]
+      },
+      "notice_unrented": {
+        "value": 0,
+        "citation": "[csv!K8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K8"
+        ]
+      },
+      "avail": {
+        "value": "0",
+        "citation": "[csv!L8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L8"
+        ]
+      },
+      "model": {
+        "value": 1,
+        "citation": "[csv!M8] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M8"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N8"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O8] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O8"
+        ]
+      },
+      "percent_occupied": {
+        "value": 89.47,
+        "citation": "[csv!P8] 89.47",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P8"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 90.0,
+        "citation": "[csv!Q8] 90.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q8"
+        ]
+      },
+      "percent_leased": {
+        "value": 89.47,
+        "citation": "[csv!R8] 89.47",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R8"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S8] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S8"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - P3",
+        "citation": "[csv!A9] PR - P3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A9"
+        ]
+      },
+      "name": {
+        "value": "P3 -1x1 Pearl",
+        "citation": "[csv!B9] P3 -1x1 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B9"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 40.0,
+        "citation": "[csv!D9] 40.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D9"
+        ]
+      },
+      "avg_rent": {
+        "value": 3945.0,
+        "citation": "[csv!E9] 3945.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E9"
+        ]
+      },
+      "units": {
+        "value": 12,
+        "citation": "[csv!F9] 12",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F9"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 11,
+        "citation": "[csv!G9] 11",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G9"
+        ]
+      },
+      "vacant_rented": {
+        "value": 1,
+        "citation": "[csv!H9] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H9"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 0,
+        "citation": "[csv!I9] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I9"
+        ]
+      },
+      "notice_rented": {
+        "value": 1,
+        "citation": "[csv!J9] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J9"
+        ]
+      },
+      "notice_unrented": {
+        "value": 1,
+        "citation": "[csv!K9] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K9"
+        ]
+      },
+      "avail": {
+        "value": "0",
+        "citation": "[csv!L9] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L9"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M9] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M9"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N9] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N9"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O9] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O9"
+        ]
+      },
+      "percent_occupied": {
+        "value": 86.67,
+        "citation": "[csv!P9] 86.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P9"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 86.67,
+        "citation": "[csv!Q9] 86.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q9"
+        ]
+      },
+      "percent_leased": {
+        "value": 93.33,
+        "citation": "[csv!R9] 93.33",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R9"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S9] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S9"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - P4",
+        "citation": "[csv!A10] PR - P4",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A10"
+        ]
+      },
+      "name": {
+        "value": "P4 -1x1 Pearl",
+        "citation": "[csv!B10] P4 -1x1 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B10"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 585.0,
+        "citation": "[csv!D10] 585.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D10"
+        ]
+      },
+      "avg_rent": {
+        "value": 6358.0,
+        "citation": "[csv!E10] 6358.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E10"
+        ]
+      },
+      "units": {
+        "value": 17,
+        "citation": "[csv!F10] 17",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F10"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 1,
+        "citation": "[csv!G10] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G10"
+        ]
+      },
+      "vacant_rented": {
+        "value": 1,
+        "citation": "[csv!H10] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H10"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I10] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I10"
+        ]
+      },
+      "notice_rented": {
+        "value": 1,
+        "citation": "[csv!J10] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J10"
+        ]
+      },
+      "notice_unrented": {
+        "value": 0,
+        "citation": "[csv!K10] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K10"
+        ]
+      },
+      "avail": {
+        "value": "3",
+        "citation": "[csv!L10] 3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L10"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M10] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M10"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N10] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N10"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O10] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O10"
+        ]
+      },
+      "percent_occupied": {
+        "value": 78.26,
+        "citation": "[csv!P10] 78.26",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P10"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 78.26,
+        "citation": "[csv!Q10] 78.26",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q10"
+        ]
+      },
+      "percent_leased": {
+        "value": 82.61,
+        "citation": "[csv!R10] 82.61",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R10"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S10] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S10"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - B1",
+        "citation": "[csv!A11] PR - B1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A11"
+        ]
+      },
+      "name": {
+        "value": "B1 -2x1 Pearl",
+        "citation": "[csv!B11] B1 -2x1 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B11"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 832.0,
+        "citation": "[csv!D11] 832.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D11"
+        ]
+      },
+      "avg_rent": {
+        "value": 5343.0,
+        "citation": "[csv!E11] 5343.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E11"
+        ]
+      },
+      "units": {
+        "value": 22,
+        "citation": "[csv!F11] 22",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F11"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 8,
+        "citation": "[csv!G11] 8",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G11"
+        ]
+      },
+      "vacant_rented": {
+        "value": 2,
+        "citation": "[csv!H11] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H11"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I11] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I11"
+        ]
+      },
+      "notice_rented": {
+        "value": 0,
+        "citation": "[csv!J11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J11"
+        ]
+      },
+      "notice_unrented": {
+        "value": 0,
+        "citation": "[csv!K11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K11"
+        ]
+      },
+      "avail": {
+        "value": "0",
+        "citation": "[csv!L11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L11"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M11"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N11"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O11] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O11"
+        ]
+      },
+      "percent_occupied": {
+        "value": 96.0,
+        "citation": "[csv!P11] 96.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P11"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 96.0,
+        "citation": "[csv!Q11] 96.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q11"
+        ]
+      },
+      "percent_leased": {
+        "value": 96.0,
+        "citation": "[csv!R11] 96.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R11"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S11] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S11"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - B2",
+        "citation": "[csv!A12] PR - B2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A12"
+        ]
+      },
+      "name": {
+        "value": "B2 -2x2 Pearl",
+        "citation": "[csv!B12] B2 -2x2 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B12"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 548.0,
+        "citation": "[csv!D12] 548.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D12"
+        ]
+      },
+      "avg_rent": {
+        "value": 8030.0,
+        "citation": "[csv!E12] 8030.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E12"
+        ]
+      },
+      "units": {
+        "value": 27,
+        "citation": "[csv!F12] 27",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F12"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 12,
+        "citation": "[csv!G12] 12",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G12"
+        ]
+      },
+      "vacant_rented": {
+        "value": 1,
+        "citation": "[csv!H12] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H12"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I12] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I12"
+        ]
+      },
+      "notice_rented": {
+        "value": 1,
+        "citation": "[csv!J12] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J12"
+        ]
+      },
+      "notice_unrented": {
+        "value": 1,
+        "citation": "[csv!K12] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K12"
+        ]
+      },
+      "avail": {
+        "value": "13",
+        "citation": "[csv!L12] 13",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L12"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M12] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M12"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N12] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N12"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O12] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O12"
+        ]
+      },
+      "percent_occupied": {
+        "value": 63.64,
+        "citation": "[csv!P12] 63.64",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P12"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 63.64,
+        "citation": "[csv!Q12] 63.64",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q12"
+        ]
+      },
+      "percent_leased": {
+        "value": 65.91,
+        "citation": "[csv!R12] 65.91",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R12"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S12] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S12"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - B3",
+        "citation": "[csv!A13] PR - B3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A13"
+        ]
+      },
+      "name": {
+        "value": "B3 -2x2 Pearl",
+        "citation": "[csv!B13] B3 -2x2 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B13"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 790.0,
+        "citation": "[csv!D13] 790.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D13"
+        ]
+      },
+      "avg_rent": {
+        "value": 4762.0,
+        "citation": "[csv!E13] 4762.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E13"
+        ]
+      },
+      "units": {
+        "value": 62,
+        "citation": "[csv!F13] 62",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F13"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 4,
+        "citation": "[csv!G13] 4",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G13"
+        ]
+      },
+      "vacant_rented": {
+        "value": 3,
+        "citation": "[csv!H13] 3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H13"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I13] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I13"
+        ]
+      },
+      "notice_rented": {
+        "value": 2,
+        "citation": "[csv!J13] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J13"
+        ]
+      },
+      "notice_unrented": {
+        "value": 2,
+        "citation": "[csv!K13] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K13"
+        ]
+      },
+      "avail": {
+        "value": "4",
+        "citation": "[csv!L13] 4",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L13"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M13] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M13"
+        ]
+      },
+      "down": {
+        "value": 1,
+        "citation": "[csv!N13] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N13"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O13] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O13"
+        ]
+      },
+      "percent_occupied": {
+        "value": 87.84,
+        "citation": "[csv!P13] 87.84",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P13"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 88.0,
+        "citation": "[csv!Q13] 88.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q13"
+        ]
+      },
+      "percent_leased": {
+        "value": 90.54,
+        "citation": "[csv!R13] 90.54",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R13"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S13] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S13"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - C1",
+        "citation": "[csv!A14] PR - C1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A14"
+        ]
+      },
+      "name": {
+        "value": "C1 -2x2 Pearl",
+        "citation": "[csv!B14] C1 -2x2 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B14"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 716.0,
+        "citation": "[csv!D14] 716.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D14"
+        ]
+      },
+      "avg_rent": {
+        "value": 610.0,
+        "citation": "[csv!E14] 610.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E14"
+        ]
+      },
+      "units": {
+        "value": 20,
+        "citation": "[csv!F14] 20",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F14"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 3,
+        "citation": "[csv!G14] 3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G14"
+        ]
+      },
+      "vacant_rented": {
+        "value": 2,
+        "citation": "[csv!H14] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H14"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 3,
+        "citation": "[csv!I14] 3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I14"
+        ]
+      },
+      "notice_rented": {
+        "value": 1,
+        "citation": "[csv!J14] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J14"
+        ]
+      },
+      "notice_unrented": {
+        "value": 2,
+        "citation": "[csv!K14] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K14"
+        ]
+      },
+      "avail": {
+        "value": "3",
+        "citation": "[csv!L14] 3",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L14"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M14] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M14"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N14] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N14"
+        ]
+      },
+      "admin": {
+        "value": 1,
+        "citation": "[csv!O14] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O14"
+        ]
+      },
+      "percent_occupied": {
+        "value": 70.97,
+        "citation": "[csv!P14] 70.97",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P14"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 71.88,
+        "citation": "[csv!Q14] 71.88",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q14"
+        ]
+      },
+      "percent_leased": {
+        "value": 74.19,
+        "citation": "[csv!R14] 74.19",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R14"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S14] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S14"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - C2",
+        "citation": "[csv!A15] PR - C2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A15"
+        ]
+      },
+      "name": {
+        "value": "C2 -3x2 Pearl",
+        "citation": "[csv!B15] C2 -3x2 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B15"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 599.0,
+        "citation": "[csv!D15] 599.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D15"
+        ]
+      },
+      "avg_rent": {
+        "value": 1513.0,
+        "citation": "[csv!E15] 1513.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E15"
+        ]
+      },
+      "units": {
+        "value": 7,
+        "citation": "[csv!F15] 7",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F15"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 2,
+        "citation": "[csv!G15] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G15"
+        ]
+      },
+      "vacant_rented": {
+        "value": 1,
+        "citation": "[csv!H15] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H15"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I15] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I15"
+        ]
+      },
+      "notice_rented": {
+        "value": 2,
+        "citation": "[csv!J15] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J15"
+        ]
+      },
+      "notice_unrented": {
+        "value": 1,
+        "citation": "[csv!K15] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K15"
+        ]
+      },
+      "avail": {
+        "value": "0",
+        "citation": "[csv!L15] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L15"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M15] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M15"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N15] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N15"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O15] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O15"
+        ]
+      },
+      "percent_occupied": {
+        "value": 66.67,
+        "citation": "[csv!P15] 66.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P15"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 66.67,
+        "citation": "[csv!Q15] 66.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q15"
+        ]
+      },
+      "percent_leased": {
+        "value": 83.33,
+        "citation": "[csv!R15] 83.33",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R15"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S15] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S15"
+        ]
+      }
+    },
+    {
+      "property_name": {
+        "value": "Pearl at Victory Ridge",
+        "citation": "[csv!A2] Pearl at Victory Ridge",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A2"
+        ]
+      },
+      "date": {
+        "value": "2025-02-09",
+        "citation": "[csv!A3] 2025-02-09",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A3"
+        ]
+      },
+      "code": {
+        "value": "PR - D1",
+        "citation": "[csv!A16] PR - D1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!A16"
+        ]
+      },
+      "name": {
+        "value": "D1 -3x2 Pearl",
+        "citation": "[csv!B16] D1 -3x2 Pearl",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!B16"
+        ]
+      },
+      "avg_sq_ft": {
+        "value": 895.0,
+        "citation": "[csv!D16] 895.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!D16"
+        ]
+      },
+      "avg_rent": {
+        "value": 9302.0,
+        "citation": "[csv!E16] 9302.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!E16"
+        ]
+      },
+      "units": {
+        "value": 8,
+        "citation": "[csv!F16] 8",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!F16"
+        ]
+      },
+      "occ_no_notice": {
+        "value": 4,
+        "citation": "[csv!G16] 4",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!G16"
+        ]
+      },
+      "vacant_rented": {
+        "value": 2,
+        "citation": "[csv!H16] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!H16"
+        ]
+      },
+      "vacant_unrented": {
+        "value": 1,
+        "citation": "[csv!I16] 1",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!I16"
+        ]
+      },
+      "notice_rented": {
+        "value": 0,
+        "citation": "[csv!J16] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!J16"
+        ]
+      },
+      "notice_unrented": {
+        "value": 2,
+        "citation": "[csv!K16] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!K16"
+        ]
+      },
+      "avail": {
+        "value": "2",
+        "citation": "[csv!L16] 2",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!L16"
+        ]
+      },
+      "model": {
+        "value": 0,
+        "citation": "[csv!M16] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!M16"
+        ]
+      },
+      "down": {
+        "value": 0,
+        "citation": "[csv!N16] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!N16"
+        ]
+      },
+      "admin": {
+        "value": 0,
+        "citation": "[csv!O16] 0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!O16"
+        ]
+      },
+      "percent_occupied": {
+        "value": 66.67,
+        "citation": "[csv!P16] 66.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!P16"
+        ]
+      },
+      "p_occ_wornonrev": {
+        "value": 66.67,
+        "citation": "[csv!Q16] 66.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!Q16"
+        ]
+      },
+      "percent_leased": {
+        "value": 66.67,
+        "citation": "[csv!R16] 66.67",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!R16"
+        ]
+      },
+      "p_trend": {
+        "value": 0.0,
+        "citation": "[csv!S16] 0.0",
+        "confidence": 0.97,
+        "source_locations": [
+          "csv!S16"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "model_calls": 2,
+    "tokens_in": 10041,
+    "tokens_out": 2057,
+    "cost_usd": 0.002033,
+    "cache_hits": 0,
+    "cost_if_uncached_usd": 0.002033,
+    "models": {
+      "anthropic/claude-haiku-5.5": {
+        "calls": 2,
+        "tokens_in": 10041,
+        "tokens_out": 2057,
+        "cost_usd": 0.002033
+      }
+    },
+    "latency_ms": 11391,
+    "mode": "table",
+    "document_kind": "csv",
+    "scanned_pages": 0,
+    "warnings": [],
+    "degraded": []
+  }
+}
