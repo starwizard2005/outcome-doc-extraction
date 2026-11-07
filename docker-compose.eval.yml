@@ -1,0 +1,9 @@
+# Development overlay for the eval/load-test tooling (mounts the sample package read-only and writes results
+# back to the working copy):
+#   docker compose -f docker-compose.yml -f docker-compose.eval.yml run --rm app python -m eval.run_eval
+services:
+  app:
+    volumes:
+      - ./assignment:/srv/assignment:ro
+      - ./outputs:/srv/outputs
+      - ./eval_out:/srv/eval_out

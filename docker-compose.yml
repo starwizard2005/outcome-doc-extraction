@@ -1,19 +1,22 @@
+# `docker compose up` starts the service on :8080. Model access comes from LLM_BASE_URL / LLM_API_KEY, read from
+# the shell environment or from a local .env file (optional: the stack still starts without one; jobs then fail
+# with a clear llm_unavailable error rather than the container refusing to boot).
 services:
   app:
     build: .
     ports:
       - "8080:8080"
     env_file:
-      - .env
+      - path: .env
+        required: false
     environment:
       DATA_DIR: /data
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
       LLM_CACHE: ${LLM_CACHE:-1}
+      WORKERS: ${WORKERS:-6}
     volumes:
       - appdata:/data
-      # read-only mounts used only by the eval runner (`docker compose run --rm app python -m eval.run_eval`)
-      - ./assignment:/srv/assignment:ro
-      - ./outputs:/srv/outputs
-      - ./eval_out:/srv/eval_out
     restart: unless-stopped
     deploy:
       resources:
