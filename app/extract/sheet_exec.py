@@ -255,6 +255,7 @@ class SheetResult:
     rows: list[dict[str, Cell]]
     warnings: list[str] = field(default_factory=list)
     sheet: str = ""
+    source_rows: list[list[int]] = field(default_factory=list)   # sheet rows behind each record (for audits)
 
 
 def run_spec(doc: ParsedDoc, spec: dict, field_keys: list[str], primary: str | None) -> SheetResult:
@@ -300,7 +301,9 @@ def run_spec(doc: ParsedDoc, spec: dict, field_keys: list[str], primary: str | N
     # 3. evaluate fields
     doc_cache: dict[str, Cell] = {}
     rows: list[dict[str, Cell]] = []
+    src_rows: list[list[int]] = []
     for a, detail in groups:
+        src_rows.append(detail)
         ctx = _Ctx(doc=doc, sheet=sheet, spec=spec, row=a, detail_rows=detail)
         rec: dict[str, Cell] = {}
         for key in field_keys:
@@ -323,21 +326,24 @@ def run_spec(doc: ParsedDoc, spec: dict, field_keys: list[str], primary: str | N
     if primary and policy in ("first", "last"):
         seen: dict[str, int] = {}
         keep: list[dict[str, Cell]] = []
+        keep_src: list[list[int]] = []
         dropped = 0
-        for rec in rows:
+        for rec, src_r in zip(rows, src_rows):
             k = rec[primary].value
             k = "" if k is None else str(k).strip()
             if k in seen and k != "":
                 dropped += 1
                 if policy == "last":
                     keep[seen[k]] = rec
+                    keep_src[seen[k]] = src_r
                 continue
             seen[k] = len(keep)
             keep.append(rec)
+            keep_src.append(src_r)
         if dropped:
             warnings.append(f"dropped {dropped} duplicate row(s) by primary key ({policy} kept)")
-        rows = keep
-    return SheetResult(rows=rows, warnings=warnings, sheet=sheet.name)
+        rows, src_rows = keep, keep_src
+    return SheetResult(rows=rows, warnings=warnings, sheet=sheet.name, source_rows=src_rows)
 
 
 def check_result(res: SheetResult, field_keys: list[str], primary: str | None, spec: dict) -> list[str]:
